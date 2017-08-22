@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="AllansCider">
-  <head>
+<head>
     <script src="/scripts/angular/angular.min.js"></script>
     <script src="/scripts/angular-route/angular-route.min.js"></script>
     <script src="/scripts/angular-resource/angular-resource.min.js"></script>
@@ -10,25 +10,40 @@
     <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css">
     <script src="/scripts/angular-material-icons/angular-material-icons.min.js"></script>
 
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <script src="javascripts/controllers/app.js"></script>
     <script src="javascripts/controllers/HomeController.js"></script>
     <script src="javascripts/controllers/HeaderController.js"></script>
     <script src="javascripts/controllers/CiderController.js"></script>
 
-  </head>
-  <body ng-app="AllansCider" ng-controller="HeaderController" style="padding: 0; margin: 0;">
-  <md-toolbar style="background-image: url('/images/apple2.jpg'); height: 40%;" layout="column" layout-align="center center">
+</head>
+<body ng-app="AllansCider" ng-controller="HeaderController" style="padding: 0; margin: 0;">
+<md-toolbar style="background-image: url('/images/apple2.jpg'); height: 40%;" layout="column"
+            layout-align="center center">
     <div style="position: absolute; top: 30px; right: 50px; width: 100%;" layout="row" layout-align="end">
-      <md-button style="color: white;" ng-click="reRoute('home')">
-        Home
-      </md-button>
-      <md-button style="color:white;" ng-click="reRoute('cider')">
-        Our Cider
-      </md-button>
+        <md-button style="color: white;" ng-click="reRoute('home')">
+            Home
+        </md-button>
+        <md-button style="color:white;" ng-click="reRoute('cider')">
+            Our Cider
+        </md-button>
     </div>
     <h1 style="color: white;">Allan's Cider</h1>
-  </md-toolbar>
-  <div ng-view></div>
-  </body>
+</md-toolbar>
+<div ng-view></div>
+<md-toolbar style="background-color: #3f3f3f; height:20%;" layout="row" layout-align="end">
+    <h3 style="color:white; padding-left: 70px; padding-top:10px;">Find Us:</h3>
+    <div layout="row" style="padding-right: 70px; padding-top:20px;">
+        <md-button class="md-icon-button" aria-label="facebook" href="https://www.facebook.com/allanscider/" >
+            <ng-md-icon icon="facebook-box" style="fill: white;"></ng-md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="twitter" href="https://twitter.com/allanscider">
+            <ng-md-icon icon="twitter" style="fill: white;"></ng-md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="instagram" href="https://www.instagram.com/allanscider/">
+            <md-icon md-svg-src="images/instagram.svg" style="fill: white;"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+</body>
 </html>

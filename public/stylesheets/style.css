@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4{
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+h3{
+  font-weight: 200;
+  font-size: 20px;
+}
+
+h1{
+  font-size: 80px;
+  font-weight: 500;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.apple-img{
+  width:100%;
+  position: relative;
+}

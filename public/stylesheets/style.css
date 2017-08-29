@@ -25,3 +25,11 @@ a {
   width:100%;
   position: relative;
 }
+
+.headerToolbar{
+  background-image: url('/images/apple2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40%;
+  width:100%;
+}

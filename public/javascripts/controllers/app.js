@@ -21,6 +21,10 @@ angular.module('AllansCider', ['ngRoute', 'ngMaterial', 'ngMdIcons'])
                 templateUrl: 'partials/cider.html',
                 controller: 'CiderController'
             })
+            .when('/contact', {
+                templateUrl: 'partials/contact.html',
+                controller: 'ContactController'
+            })
             .otherwise({
                 redirectTo: '/'
             })

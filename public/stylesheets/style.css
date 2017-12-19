@@ -1,10 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", sans-serif;
+  padding: 70px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 h1, h2, h3, h4{
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 h3{
@@ -17,8 +19,43 @@ h1{
   font-weight: 500;
 }
 
+h2 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h2:before,
+h2:after {
+  background: #92ce98;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 400%;
+}
+
+h2:before {
+  right: 100%;
+}
+
+h2:after {
+  left: 100%;
+}
+
+.container {
+  overflow: hidden;
+  text-align: center;
+}
+
+
 a {
   color: #00B7FF;
+}
+
+p{
+  font-size: 18px;
 }
 
 .apple-img{
@@ -27,9 +64,14 @@ a {
 }
 
 .headerToolbar{
-  background-image: url('/images/apple2.jpg');
+  background-image: url('/public/images/apple2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 40%;
   width:100%;
+}
+
+.container{
+ padding-top: 2%;
+  padding-bottom: 2%;
 }

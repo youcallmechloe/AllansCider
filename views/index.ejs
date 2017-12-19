@@ -1,50 +1,153 @@
 <!DOCTYPE html>
-<html ng-app="AllansCider">
+<html>
 <head>
-    <script src="/scripts/angular/angular.min.js"></script>
-    <script src="/scripts/angular-route/angular-route.min.js"></script>
-    <script src="/scripts/angular-resource/angular-resource.min.js"></script>
-    <script src="/scripts/angular-aria/angular-aria.min.js"></script>
-    <script src="/scripts/angular-animate/angular-animate.min.js"></script>
-    <script src="/scripts/angular-material/angular-material.min.js"></script>
-    <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css">
-    <script src="/scripts/angular-material-icons/angular-material-icons.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
     <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <script src="javascripts/controllers/app.js"></script>
-    <script src="javascripts/controllers/HomeController.js"></script>
-    <script src="javascripts/controllers/HeaderController.js"></script>
-    <script src="javascripts/controllers/CiderController.js"></script>
-    <script src="javascripts/controllers/ContactController.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/black-theme.css'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
 
 </head>
-<body ng-app="AllansCider" ng-controller="HeaderController" style="padding: 0; margin: 0;">
-<md-toolbar class="headerToolbar" layout="column"
-            layout-align="center center">
-    <div style="position: absolute; top: 30px; right: 50px; width: 100%;" layout="row" layout-align="end">
-        <md-button style="color: white;" ng-click="reRoute('home')">
-            Home
-        </md-button>
-        <md-button style="color:white;" ng-click="reRoute('cider')">
-            Our Cider
-        </md-button>
+
+<body style="padding: 0; margin: 0;" onload="load()">
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Allan's Cider</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#story">Our Story</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#cider">The Cider</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+        </ul>
     </div>
-    <h1 style="color: white;">Allan's Cider</h1>
-</md-toolbar>
-<div ng-view></div>
-<md-toolbar style="background-color: #3f3f3f; height:20%;" layout="row" layout-align="end">
-    <h3 style="color:white; padding-left: 70px; padding-top:10px;">Find Us:</h3>
+</nav>
+
+<!-- Image Header -->
+<div class="container-fluid" style="padding: 0 0 0 0;">
+    <img src="/images/apple.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+</div>
+
+<div class="container-fluid" id="about">
+    <div class="container">
+        <h2>ABOUT US</h2>
+        <p>An artisan, traditional cider maker based in Cornwall using local hand-picked apples. </p>
+
+        <p>Since 2012 our orchard has grown with the addition of historic apple and pear trees, such as Collogget Pippin,
+            bringing rare local varieties back to the area. </p>
+
+        <p>Our philosophy is to produce small batches of traditionally handmade Cornish cider, with a ‘proper’ bold cider
+            taste with a full body you will remember. </p>
+
+        <p>Our belief is that cider should be produced with high quality local fruit and time taken to allow the juice to
+            slow ferment over the winter and spring for at least 6 months before bottling. The only addition is a small
+            amount of sulphite for freshness before the golden liquid is able to condition in its own bottle for a further
+            month.</p>
+
+        <p>We continue to make our cider from the old farm house that can trace its history back to the 17th century when
+            the local farmer gave cider to the workers as part-payment of their wages</p>
+    </div>
+</div>
+
+
+<!-- Work Row -->
+<div class="container-fluid bg-secondary" id="story">
+    <div class="container">
+        <h2>OUR STORY</h2>
+        <p>Allan’s Cider has been making cider for over 5 years, initially to use the apples dropping in our small orchard.
+            There was only so many apple pies, crumbles, pickles and juice we could consume.</p>
+
+        <p>In 2012 we bought a small hand press and bucket scratter and made the first 5 gallons of cider with guidance
+            from a couple of locals and well known authors. A few months later our first efforts yielded a very dry clear
+            golden cider which was nothing like the memories of the scrumpy of our youth.</p>
+
+        <p>Over the next five years we expanded our production with the addition of a ‘proper’ press and made the
+            orchard more varied with the addition of some solid old fashioned varieties such as Pig Snout, Browns and
+            our local Colloggett Pippin.</p>
+
+        <p>Our cider is refreshing and dry with a unique taste which changes with the seasons as the apples change from
+            year to year. </p>
+
+        <p>We are happy to collect apples that would otherwise go to waste and we never turn away a good apple. In the
+            old country tradition of bartering we will swap some of our bottle conditioned cider for the apples we
+            collect. If you can deliver to us we will give you more. </p>
+
+        <p style="font-style:italic">   If you are interested in becoming a stockist please contact us.    </p>
+    </div>
+</div>
+
+
+<!-- Contact Container -->
+<div class="container" id="contact">
+    <div class="w3-row">
+        <div class="w3-col m5">
+            <h2>CONTACT US</h2>
+            <!--<h3>Address</h3>-->
+            <!--<p>Swing by for a cup of coffee, or whatever.</p>-->
+            <!--<p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>-->
+            <!--<p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>-->
+            <!--<p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>-->
+        </div>
+        <div class="w3-col m7">
+            <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input" type="text" name="Message" required>
+                </div>
+                <input class="w3-check" type="checkbox" checked name="Like">
+                <label>I Like it!</label>
+                <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+            </form>
+        </div>
+    </div>
     <div layout="row" style="padding-right: 70px; padding-top:20px;">
-        <md-button class="md-icon-button" aria-label="facebook" href="https://www.facebook.com/allanscider/" >
-            <ng-md-icon icon="facebook-box" style="fill: white;"></ng-md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="twitter" href="https://twitter.com/allanscider">
-            <ng-md-icon icon="twitter" style="fill: white;"></ng-md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="instagram" href="https://www.instagram.com/allanscider/">
-            <md-icon md-svg-src="images/instagram.svg" style="fill: white;"></md-icon>
-        </md-button>
     </div>
-</md-toolbar>
+</div>
+
+
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <span class="navbar-brand" >Follow Us</span>
+    <a class="nav-item nav-link" href="https://www.facebook.com/allanscider/" title="Facebook"><i class="fa fa-facebook" style="color: #039b12;"></i></a>
+    <a class="nav-item nav-link" href="https://twitter.com/allanscider" title="Twitter"><i class="fa fa-twitter" style="color: #039b12;"></i></a>
+    <a class="nav-item nav-link" href="https://www.instagram.com/allanscider/" title="Instagram"><i class="fa fa-instagram" style="color: #039b12;"></i></a>
+
+</nav>
+
 </body>
 </html>

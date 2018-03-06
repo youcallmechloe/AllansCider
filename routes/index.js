@@ -31,7 +31,7 @@ router.post('/sendEmail', function(req,res){
 
     var mailOptions = {
         from: 'allans-cider-no-reply@outlook.com',
-        to: 'rmallan30@hotmail.com, chloe.allan@outlook.com',
+        to: 'info@cornishcidergarden.co.uk',
         subject: body.Name + ' has sent you a message on Allanscider.com!',
         text: message
     };

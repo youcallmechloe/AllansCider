@@ -20,6 +20,8 @@
     "express": "~4.15.2",
     "morgan": "~1.8.1",
     "nodemailer": "^4.6.0",
+    "os": "^0.1.1",
+    "sendmail": "^1.2.0",
     "serve-favicon": "~2.4.2"
   }
 }

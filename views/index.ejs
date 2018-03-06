@@ -9,6 +9,7 @@
             integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
             integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src = './javascripts/controllers/index.js'></script>
 
     <link rel='stylesheet' href='/stylesheets/style.css'/>
@@ -43,7 +44,7 @@
                 <a class="nav-link" href="#story">Our Story</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#cider">The Cider</a>
+                <a class="nav-link disabled" >The Cider</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact Us</a>
@@ -106,31 +107,39 @@
 </div>
 
 
-<!-- Contact Container -->
-<!--<div class="container" id="contact">-->
-    <!--<div class="w3-row">-->
-        <!--<div class="w3-col m5">-->
-            <!--<h2>CONTACT US</h2>-->
-        <!--</div>-->
-        <!--<div class="w3-col m7">-->
-            <!--<form class="">-->
-                <!--<div class="w3-section">-->
-                    <!--<label>Name</label>-->
-                    <!--<input class=" nameInput" type="text" name="Name" required>-->
-                <!--</div>-->
-                <!--<div class="w3-section">-->
-                    <!--<label>Email</label>-->
-                    <!--<input class="emailInput" type="text" name="Email" required>-->
-                <!--</div>-->
-                <!--<div class="w3-section">-->
-                    <!--<label>Message</label>-->
-                    <!--<input class="messageInput" type="text" name="Message" required>-->
-                <!--</div>-->
-                <!--<button class="email">Send</button>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+ <!--Contact Container-->
+<div class="container">
+    <div class="w3-row">
+        <div class="w3-col m5">
+            <h2>CONTACT US</h2>
+        </div>
+        <div>
+            <p>If you wish to contact us please write your message below and fill in your details should you like us to
+                contact you back.</p>
+        </div>
+        <div class="w3-col m7">
+            <div>
+                <label>Name</label>
+                <div class="w3-section">
+                    <input class="nameInput" type="text" required>
+                </div>
+                <label style="vertical-align: middle;">Message</label>
+                <div class="w3-section">
+                    <textarea class="messageInput" rows="2" cols="30" required></textarea>
+                </div>
+                <label>Contact Number</label>
+                <div class="w3-section">
+                    <input class="phoneInput" type="number">
+                </div>
+                <label>Email Address</label>
+                <div class="w3-section">
+                    <input class="emailInput" type="email">
+                </div>
+                <button id="email" onclick="sendContact()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--<div class="container-fluid">-->
     <!--<div class="row">-->
@@ -143,17 +152,16 @@
                 <!--<input class="nameInput" type="text" required>-->
             <!--</div>-->
             <!--<div>-->
-                <!--<label>Email</label>-->
-                <!--<input class="emailInput" type="email" required>-->
-            <!--</div>-->
-            <!--<div>-->
                 <!--<label>Message</label>-->
                 <!--<input class="messageInput" type="text" required>-->
             <!--</div>-->
-            <!--<button class="email">Send</button>-->
+            <!--<button id="email" onclick="sendContact()">Send</button>-->
         <!--</div>-->
     <!--</div>-->
 
+    <!--<script type="javascript">-->
+
+    <!--</script>-->
 
 <!--</div>-->
 

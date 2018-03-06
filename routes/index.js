@@ -1,5 +1,6 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
+var sendmail = require('sendmail');
 
 var router = express.Router();
 
@@ -9,26 +10,38 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/sendEmail', function(req,res){
+    var body = req.body;
+    console.log(body);
     var transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'hotmail',
         auth: {
-            user: 'youremail@gmail.com',
-            pass: 'yourpassword'
+            user: "allans-cider-no-reply@outlook.com",
+            pass: "Allanscider"
         }
     });
 
+    var message = body.Message;
+    if(body.Phone !== ""){
+        message += '\n Phone Number: ' + body.Phone;
+    }
+
+    if(body.Email !== ""){
+        message += '\n Email Address: ' + body.Email;
+    }
+
     var mailOptions = {
-        from: 'youremail@gmail.com',
-        to: 'chloe.allan@outlook.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        from: 'allans-cider-no-reply@outlook.com',
+        to: 'rmallan30@hotmail.com, chloe.allan@outlook.com',
+        subject: body.Name + ' has sent you a message on Allanscider.com!',
+        text: message
     };
 
     transporter.sendMail(mailOptions, function(error, info){
+        console.log(error);
         if (error) {
             res.send(error);
         } else {
-            res.send('Email sent: ' + info.response);
+            res.send('sent');
         }
     });
 });
